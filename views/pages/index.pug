@@ -1,0 +1,18 @@
+html
+	head
+		title Trading Card Home Page
+body
+	if loggedIn
+		a(href="/") |Home|
+		|
+		a(href="/users/"+user._id) Profile|
+		|
+		a(href="/logout") Log Out|
+		|
+	else
+		include ../partials/headerLoggedOut	
+	div#main
+		h1 Welcome to the Trading Card Home Page!
+
+		
+	include ../partials/footer

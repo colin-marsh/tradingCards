@@ -1,0 +1,60 @@
+a(href='/') |Home|
+a(href='/users') Users|
+a(href='/order') Order|
+a(href='/users/'+user._id) Profiles|
+a(href='/logout') Log Out|
+br
+br
+head
+  title #{user.username}
+  style.
+    .column {
+    float: left;
+    }
+    .left{
+    width: 25%;
+    }
+    .right {
+    width: 25%;
+    }
+    .middle {
+    width: 50%;
+    }
+body(onload ="init()")
+  br
+  br
+  #info
+  #main
+    #left.column.left
+      h3 Cards
+      br
+      each card in user.cards
+        a(href ="/card/"+card._id) #{card.name}
+        br
+      br
+    #middle.column.middle
+      h3 Propose a Trade
+      br
+      |Trade With:
+      br
+      select#sel(name='friends')
+      div#trade
+      br
+      br
+      h3 Pending Trades
+      div#pendingTrades
+    #right.column.right
+      h3 Friends
+      br
+      div#friendsList
+      h3 Pending Friend Requests
+      br
+      div#friendReqs
+      h3 Add Friend:
+      br
+      |Search By Name
+      br
+      input#addFriend(type = "text" oninput= "searchFriend()" )
+      br
+      div#searchFriends
+  script(src='../../client.js')

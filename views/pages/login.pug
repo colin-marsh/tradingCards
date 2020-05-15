@@ -1,0 +1,15 @@
+html
+ head
+  title Login Page
+ body
+  include ../partials/headerLoggedOut
+  h3 Log in to Your Account
+  form(action = "/login" method = "post")
+   br
+   input(type = "text" name = "username" id = "uname" value = "Username" required)
+   br
+   input(type = "text" name = "password" id = "pass" value = "Password" required)
+   br
+   input(type='button',value = "Log in")
+  include ../partials/footer
+ 

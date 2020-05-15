@@ -1,0 +1,14 @@
+html
+ head
+  title Sign Up Page
+ body
+  include ../partials/headerLoggedOut
+  h3 Create New Account
+  form(action = "/register" method = "post")
+   br
+   input(type = "text" name = "username" id = "username" value = "Username" required)
+   br
+   input(type = "text" name = "password" id = "password" value = "Password" required)
+   br
+   input(type='button',value = "Create Account")
+  include ../partials/footer

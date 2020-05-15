@@ -1,0 +1,23 @@
+html
+	head
+		title Store Manager User Search Results
+body
+	
+	a(href="/") |Home|
+	|
+	a(href="/users") Users|
+	|
+	a(href="/order") Order|
+	|
+	a(href="/users/"+activeUser._id) Profile|
+	|
+	a(href="/logout") Log Out|
+	|
+	br
+	br
+	
+	each user in users
+		a(href="/users/" + user._id) #{user.username}
+		br
+			
+	include ../partials/footer
